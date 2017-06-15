@@ -3,19 +3,20 @@
 # of time to perform optimization, and proven good results
 
 # OpenAI Gym Parameters
-GAME_NAME = 'PongDeterministic-v4'
-SAVE_FOLDER = "pong_snapshots"
+GAME_NAME = 'SpaceInvaders-v0'
+SAVE_FOLDER = "spaceinvaders_snapshots"
 
 RESIZE_SHAPE = (1, 42, 42) 
 SEED = 1 # Random seed to replicate runs
 
 # Multiprocessing Parameters
-NUM_WORKERS = 4 # This many will train, one more will test
+NUM_WORKERS = 8 # This many will train, one more will test
 
 # Learning Parameters
 NUM_A3C_STEPS = 20
 MAX_EPISODE_LENGTH = 10000
 MAX_ITERS = 1000000
+TEST_INTERVAL = 60 # number of seconds to sleep between tests
 
 LEARNING_RATE = .0001 # LR for Adam optimizer
 REWARD_CLIP = 1 # Clipping rewards encourages generality
@@ -25,7 +26,7 @@ ENTROPY_EFFECT = .01 # Encourages exploration
 GRAD_CLIP = 40 # Ensures reasonable sized gradients
 
 # File I/O Parameters
-SAVE_INTERVAL = 1000
+SAVE_INTERVAL = 5000
 FILE_PREFIX = "iteration_"
 EXTENSION = ".torch"
 GIF_FRAME_SKIP = 3 # Saving every screen results in a slow GIF

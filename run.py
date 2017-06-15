@@ -40,6 +40,7 @@ num_iters = 0
 screens = []
 screens.append(observation)
 
+total_reward = 0
 while not done:
 
 	env.render()
@@ -57,7 +58,8 @@ while not done:
 
 	# Act on the environment with the chosen action, find observation and reward
 	observation, reward, done, _ = env.step(action[0, 0])
-	
+	total_reward += reward	
+
 	# Build up frames of the gif
 	if num_iters % GIF_FRAME_SKIP == 0:
 		screens.append(observation)
@@ -69,4 +71,8 @@ while not done:
 
 	num_iters += 1
 
-imageio.mimsave("images/{}.gif".format(GAME_NAME), screens)
+print("Accumulated {} total reward".format(total_reward))
+
+f = "images/{}.gif".format(GAME_NAME)
+print("Saving .gif to {}".format(f))
+imageio.mimsave(f, screens)

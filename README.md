@@ -9,3 +9,4 @@ The A3C implemented using Pytorch and heavily inspired by the implementation fou
 * Make training processes exit upon convergence
 * Make testing process exit when training process exits
 * Implement logging (tensorboard/visdom)
+* Test how many threads to use on a four core processor

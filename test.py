@@ -101,4 +101,4 @@ def test(rank, shared_agent):
 			episode_length = 0
 			actions.clear()
 			state = resize(env.reset())
-			time.sleep(30)
+			time.sleep(TEST_INTERVAL)

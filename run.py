@@ -43,7 +43,8 @@ screens.append(observation)
 total_reward = 0
 while not done:
 
-	# env.render()
+	if DISPLAY:
+		env.render()
 
 	if num_iters != 0: 
 		c_x = Variable(c_x.data)

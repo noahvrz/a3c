@@ -9,6 +9,8 @@ SAVE_FOLDER = "spaceinvaders_snapshots"
 RESIZE_SHAPE = (1, 42, 42) 
 SEED = 1 # Random seed to replicate runs
 
+DISPLAY = False
+
 # Multiprocessing Parameters
 NUM_WORKERS = 8 # This many will train, one more will test
 

@@ -12,7 +12,7 @@ SEED = 1 # Random seed to replicate runs
 DISPLAY = False
 
 # Multiprocessing Parameters
-NUM_WORKERS = 8 # This many will train, one more will test
+NUM_WORKERS = 16 # This many will train, one more will test
 
 # Learning Parameters
 NUM_A3C_STEPS = 20

@@ -65,7 +65,7 @@ def test(rank, shared_agent):
 		# Choose an action
 		# Here, just greedily choose the action
 		action_probs = softmax(policy)
-		action = action_probs.max(1)[1].data.numpy()
+		action = action_probs.max(1, keepdim=True)[1].data.numpy()
 
 		# Act on the environment with the chosen action, find observation and reward
 		observation, reward, done, _ = env.step(action[0, 0])

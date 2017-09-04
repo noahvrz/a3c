@@ -10,7 +10,7 @@ from config import *
 # These perform well for this type of network 
 def normalized_columns_initializer(weights, std=1.0):
 	out = torch.randn(weights.size())
-	out *= std / torch.sqrt(out.pow(2).sum(1).expand_as(out))
+	out *= std / torch.sqrt(out.pow(2).sum(1, keepdim=True))
 	return out
 def weights_init(m):
 	classname = m.__class__.__name__
